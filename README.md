@@ -1,15 +1,33 @@
 # Atlas 工作台 · 移动端
 
+<p align="center">
+  <img src="docs/brand/atlas-logo-square-512.png" width="88" alt="Atlas 工作台">
+</p>
+
 一套面向「人事 / 费用 / 资产 / 档案 / 客户项目」的移动办公应用，覆盖申请、审批、台账查询与考勤打卡。
 基于 **Taro 4 + Vue 3 + NutUI + TypeScript**，一份代码同时产出 **H5** 与 **微信小程序**。
 
 > 演示项目：不含任何后端依赖，所有接口由内置数据引擎在本地生成，打开即可完整体验。
+
+**在线体验** → <https://eggdanbo.github.io/atlas-admin-app/>
 
 ![Taro](https://img.shields.io/badge/Taro-4.2-07c160?logo=taro&logoColor=white)
 ![Vue](https://img.shields.io/badge/Vue-3.5-42b883?logo=vue.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178c6?logo=typescript&logoColor=white)
 ![NutUI](https://img.shields.io/badge/NutUI-4.3-ff6b35)
 ![License](https://img.shields.io/badge/license-MIT-4f46e5)
+
+## 演示
+
+<p align="center">
+  <img src="docs/brand/atlas-demo.gif" width="300" alt="登录 → 打卡 → 我的 → 个人信息 → 所属单位">
+</p>
+
+<p align="center">
+  <img src="docs/brand/atlas-app-qr.png" width="150" alt="扫码访问">
+  <br>
+  <sub>手机扫码直接打开 · 或访问 <a href="https://eggdanbo.github.io/atlas-admin-app/">eggdanbo.github.io/atlas-admin-app</a></sub>
+</p>
 
 ## 项目概览
 
