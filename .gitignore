@@ -22,3 +22,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyo
+
+# 微信开发者工具的本地私有配置
+project.private.config.json
