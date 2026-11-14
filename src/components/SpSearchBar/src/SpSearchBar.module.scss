@@ -1,0 +1,71 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 76px;
+  padding: 0 22px;
+  border-radius: 18px;
+  border: 1px solid #edeff6;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(23, 23, 64, 0.04);
+}
+
+/* 页面顶层使用时自带左右留白；放进工具栏时由父级控制 */
+.search--inset {
+  margin: 16px 16px 0;
+}
+
+.search-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #b6bccd;
+  border-radius: 50%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    bottom: -2px;
+    width: 10px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #b6bccd;
+    transform: rotate(45deg);
+  }
+}
+
+.search-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 24px;
+  color: #23263a;
+}
+
+.search-placeholder {
+  color: #b3b8c8;
+}
+
+.search-clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #eef0f6;
+
+  &:active {
+    background-color: #e4e7f2;
+  }
+}
+
+.search-clear-icon {
+  font-size: 24px;
+  line-height: 1;
+  color: #8a90a3;
+}

@@ -1,0 +1,59 @@
+// 表单输入控件（配合 SpFormRow 使用，页面里直接写类名）
+
+.sp-form-input {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  height: 46px;
+  font-size: 24px;
+  color: #23263a;
+  text-align: right;
+}
+
+.sp-form-placeholder {
+  font-size: 24px;
+  color: #b6bbc9;
+}
+
+// 只读文本值（选择器一类的行）
+.sp-form-value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: right;
+  font-size: 24px;
+  color: #23263a;
+}
+
+.sp-form-value--placeholder {
+  color: #b6bbc9;
+}
+
+// 行尾的「显示 / 隐藏」切换
+.sp-form-eye {
+  flex-shrink: 0;
+  padding: 6px 0 6px 12px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #4f46e5;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+// 行下提示（行内容较多、提示需要手动摆放时使用）
+.sp-form-error {
+  padding: 8px 4px 14px;
+  font-size: 19px;
+  color: #f43f5e;
+}
+
+.sp-form-ok {
+  padding: 8px 4px 14px;
+  font-size: 19px;
+  color: #0d9488;
+}

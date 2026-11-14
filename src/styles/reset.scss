@@ -1,0 +1,77 @@
+/* 样式重置 */
+page {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+  font-size: 28px;
+  color: $text-color-primary;
+  background-color: $bg-color;
+  box-sizing: border-box;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// NutUI Cell desc 文字颜色加深（默认 rgba(0,0,0,0.25) 太淡）
+.nut-cell__value {
+  color: $text-color-primary !important;
+}
+
+view,
+text,
+image,
+scroll-view,
+swiper,
+swiper-item,
+movable-area,
+movable-view,
+cover-view,
+cover-image,
+icon,
+text,
+rich-text,
+progress,
+button,
+checkbox,
+form,
+input,
+label,
+picker,
+picker-view,
+radio,
+slider,
+switch,
+textarea,
+navigator,
+audio,
+image,
+video,
+map,
+canvas,
+ad,
+web-view {
+  box-sizing: border-box;
+}
+
+image {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nut-form-item__label.nut-cell__title {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nut-form,
+.not-shadow {
+  .nut-cell-group__wrap {
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+taro-swiper-core {
+  height: auto !important;
+}

@@ -1,0 +1,211 @@
+.page {
+  min-height: 100%;
+  padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  background-color: #f5f6fa;
+}
+
+.tip {
+  padding: 60px 0;
+  text-align: center;
+  font-size: 22px;
+  color: #9aa0b4;
+}
+
+/* 概览卡 */
+.hero {
+  margin: 16px 16px 0;
+  padding: 26px 26px 24px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #3b4fe0 0%, #7c6cf6 100%);
+  box-shadow: 0 16px 30px rgba(59, 79, 224, 0.24);
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-cat {
+  padding: 4px 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.18);
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-status {
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 19px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #4f46e5;
+
+  &--wait {
+    color: #b45309;
+  }
+
+  &--progressing {
+    color: #1d4ed8;
+  }
+
+  &--pass {
+    color: #0d9488;
+  }
+
+  &--back {
+    color: #b91c1c;
+  }
+
+  &--muted {
+    color: #6b7080;
+  }
+}
+
+.hero-title {
+  display: block;
+  margin-top: 18px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-no {
+  display: block;
+  margin-top: 8px;
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.4px;
+}
+
+/* 卡片 */
+/* 审批流 */
+.step {
+  display: flex;
+  gap: 18px;
+  padding-top: 18px;
+}
+
+.step-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background-color: #d8dbe6;
+  flex-shrink: 0;
+
+  &--done {
+    background-color: #4f46e5;
+  }
+
+  &--active {
+    background-color: #f59e0b;
+    box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.16);
+  }
+
+  &--error {
+    background-color: #dc2626;
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0.14);
+  }
+
+  &--canceled {
+    background-color: #e5e7ef;
+    border: 2px solid #d8dbe6;
+  }
+}
+
+.line {
+  flex: 1;
+  width: 2px;
+  margin: 6px 0 0;
+  background-color: #eef0f6;
+}
+
+.step-body {
+  flex: 1;
+  padding-bottom: 20px;
+  min-width: 0;
+}
+
+.step-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.step-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1c1c2e;
+
+  &--muted {
+    font-weight: 400;
+    color: #b3b8c8;
+  }
+}
+
+.step-time {
+  flex-shrink: 0;
+  font-size: 19px;
+  color: #b3b8c8;
+}
+
+.step-handler {
+  display: block;
+  margin-top: 6px;
+  font-size: 21px;
+  color: #6b7080;
+}
+
+.step-remark {
+  display: block;
+  margin-top: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background-color: #f7f8fc;
+  font-size: 21px;
+  line-height: 1.5;
+  color: #6b7080;
+
+  &--error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+  }
+}
+
+/* 操作 */
+.actions {
+  margin: 22px 16px 0;
+}
+
+.revoke {
+  padding: 22px 0;
+  border-radius: 999px;
+  border: 1px solid #fecaca;
+  background-color: #fff;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #dc2626;
+
+  &:active {
+    background-color: #fef2f2;
+  }
+}
+
+.actions-hint {
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 19px;
+  color: #b3b8c8;
+}

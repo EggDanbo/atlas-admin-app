@@ -1,0 +1,12 @@
+allowBuilds:
+  '@file-viewer/web': true
+  '@parcel/watcher': true
+  '@swc/core': true
+  '@tarojs/binding': true
+  '@tarojs/cli': true
+  core-js: true
+  core-js-pure: true
+  esbuild: true
+  simple-git-hooks: true
+minimumReleaseAge: 0
+minimumReleaseAgeExclude: []

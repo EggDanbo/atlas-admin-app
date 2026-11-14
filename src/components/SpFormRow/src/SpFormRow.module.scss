@@ -1,0 +1,56 @@
+.item {
+  padding: 0 4px;
+
+  /* 行与行之间的分隔线：用「后续兄弟」选择器，中间夹着强度条等元素时也能命中 */
+  & ~ & {
+    border-top: 1px solid #f3f4f9;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 94px;
+}
+
+.row--error {
+  .label {
+    color: #e11d48;
+  }
+}
+
+.label {
+  flex-shrink: 0;
+  width: 150px;
+  font-size: 24px;
+  color: #23263a;
+}
+
+.req {
+  margin-left: 4px;
+  font-size: 22px;
+  color: #f43f5e;
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  border-top: 2px solid #c3c8d6;
+  border-right: 2px solid #c3c8d6;
+  transform: rotate(45deg);
+}
+
+.error {
+  padding: 8px 4px 14px;
+  font-size: 19px;
+  color: #f43f5e;
+}
+
+.success {
+  padding: 8px 4px 14px;
+  font-size: 19px;
+  color: #0d9488;
+}

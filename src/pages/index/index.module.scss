@@ -1,0 +1,54 @@
+.page {
+  min-height: 100%;
+  padding: 12px 0 calc(16px + env(safe-area-inset-bottom, 0px));
+  background: #f5f6fa;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin: 14px 16px 0;
+}
+
+.action {
+  flex: 1;
+  padding: 18px 20px 16px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  overflow: hidden;
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &--checkin {
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(13, 148, 136, 0.24);
+  }
+
+  &--expense {
+    background: linear-gradient(135deg, #4338ca 0%, #7c6cf6 100%);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.24);
+  }
+}
+
+.action-kicker {
+  font-size: 19px;
+  letter-spacing: 2px;
+  opacity: 0.72;
+}
+
+.action-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.action-desc {
+  font-size: 19px;
+  opacity: 0.7;
+}

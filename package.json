@@ -1,0 +1,95 @@
+{
+  "name": "atlas-admin-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Atlas 工作台 · 移动端演示应用",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "build:swan": "taro build --type swan",
+    "build:alipay": "taro build --type alipay",
+    "build:tt": "taro build --type tt",
+    "build:h5": "taro build --type h5",
+    "build:rn": "taro build --type rn",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:swan": "npm run build:swan -- --watch",
+    "dev:alipay": "npm run build:alipay -- --watch",
+    "dev:tt": "npm run build:tt -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "dev:rn": "npm run build:rn -- --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "mock:schema": "node scripts/mock/extract-schema.mjs"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "dependencies": {
+    "@file-viewer/preset-office": "^2.3.0",
+    "@file-viewer/renderer-text": "^2.3.0",
+    "@file-viewer/vue3": "^2.3.0",
+    "@file-viewer/web": "^2.3.0",
+    "@nutui/icons-vue-taro": "^0.0.9",
+    "@nutui/nutui-taro": "^4.3.14",
+    "@tarojs/components": "4.2.1",
+    "@tarojs/helper": "4.2.1",
+    "@tarojs/plugin-framework-vue3": "4.2.1",
+    "@tarojs/plugin-html": "4.2.1",
+    "@tarojs/plugin-platform-h5": "4.2.1",
+    "@tarojs/plugin-platform-weapp": "4.2.1",
+    "@tarojs/router": "4.2.1",
+    "@tarojs/runtime": "4.2.1",
+    "@tarojs/shared": "4.2.1",
+    "@tarojs/taro": "4.2.1",
+    "@vueuse/core": "^14.4.0",
+    "@wecom/jssdk": "^2.4.2",
+    "alova": "^3.5.5",
+    "crypto-js": "^4.2.0",
+    "date-fns": "^4.4.0",
+    "ol": "^10.10.0",
+    "pinia": "^4.0.3",
+    "vue": "^3.5.41",
+    "xe-utils": "^4.0.12"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.3.0",
+    "@file-viewer/vite-plugin": "^2.3.0",
+    "@nutui/auto-import-resolver": "^1.0.0",
+    "@playwright/test": "^1.62.1",
+    "@tarojs/cli": "4.2.1",
+    "@tarojs/vite-runner": "4.2.1",
+    "@tarojs/webpack5-runner": "4.2.1",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^26.2.0",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitejs/plugin-vue-jsx": "^5.1.6",
+    "babel-preset-taro": "4.2.1",
+    "copy-webpack-plugin": "^14.0.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-format": "^2.0.1",
+    "lint-staged": "^16.4.0",
+    "playwright": "^1.62.1",
+    "simple-git-hooks": "^2.13.1",
+    "terser-webpack-plugin": "^5.6.1",
+    "typescript": "^5.7.3",
+    "unplugin-vue-components": "^28.4.1",
+    "vite": "^4.2.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,jsx,tsx,scss}": [
+      "eslint --fix"
+    ]
+  },
+  "packageManager": "pnpm@12.15.0"
+}

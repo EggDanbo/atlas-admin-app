@@ -1,0 +1,64 @@
+/* 申请/请假列表共用的工具条、筛选、列表与悬浮按钮 */
+
+/* 顶部工具条 */
+.toolbar {
+  position: relative;
+  z-index: 50;
+  padding: 16px 16px 0;
+}
+
+/* 搜索框：整块作为点击区，内层 input 垂直居中 */
+/* 状态筛选 */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.filter-count {
+  font-size: 20px;
+  color: #9aa0b4;
+}
+
+/* 下拉面板 */
+/* 列表 */
+.list {
+  margin-top: 6px;
+}
+
+.refresh {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 22px;
+  color: #4f46e5;
+}
+
+/* 悬浮新增 */
+.fab {
+  position: fixed;
+  right: 32px;
+  bottom: calc(48px + env(safe-area-inset-bottom, 0px));
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b4fe0 0%, #7c6cf6 100%);
+  box-shadow: 0 14px 28px rgba(59, 79, 224, 0.4);
+
+  &:active {
+    opacity: 0.85;
+    transform: scale(0.96);
+  }
+}
+
+.fab-plus {
+  margin-top: -6px;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}

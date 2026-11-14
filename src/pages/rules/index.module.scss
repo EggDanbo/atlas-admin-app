@@ -1,0 +1,248 @@
+.page {
+  min-height: 100%;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  background-color: #f5f6fa;
+}
+
+.toolbar {
+  padding: 16px 16px 0;
+}
+
+/* 搜索 */
+.summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 16px 6px 0;
+}
+
+.summary-text {
+  font-size: 21px;
+  color: #9aa0b4;
+}
+
+.summary-hint {
+  font-size: 20px;
+  color: #0d9488;
+}
+
+/* 模式分布 */
+.mode-stats {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 10px 6px 0;
+}
+
+.mode-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mode-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  &--fixed {
+    background-color: #4f46e5;
+  }
+
+  &--free {
+    background-color: #0d9488;
+  }
+
+  &--shift {
+    background-color: #ea8a0b;
+  }
+}
+
+.mode-stat-text {
+  font-size: 19px;
+  color: #8a90a3;
+}
+
+.tip {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 22px;
+  color: #9aa0b4;
+}
+
+/* 规则卡片 */
+.card {
+  margin: 14px 16px 0;
+  padding: 20px 24px 16px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(23, 23, 64, 0.05);
+
+  &:active {
+    opacity: 0.88;
+  }
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.card-name {
+  font-size: 29px;
+  font-weight: 600;
+  color: #1c1c2e;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 模式徽章 */
+.mode {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+
+  &--fixed {
+    color: #4f46e5;
+    background-color: #eef2ff;
+  }
+
+  &--free {
+    color: #0d9488;
+    background-color: #ecfdf5;
+  }
+
+  &--shift {
+    color: #b45309;
+    background-color: #fff7ed;
+  }
+}
+
+.tag {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 19px;
+
+  &--on {
+    color: #0d9488;
+    background-color: #ecfdf5;
+  }
+
+  &--off {
+    color: #6b7080;
+    background-color: #f2f3f7;
+  }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 21px;
+  color: #9aa0b4;
+}
+
+.dot {
+  color: #c8ccd8;
+}
+
+.shift {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background-color: #f7f8fc;
+}
+
+.shift-time {
+  font-size: 30px;
+  font-weight: 700;
+  color: #23263a;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.5px;
+}
+
+.shift-tag {
+  font-size: 19px;
+  color: #6b7080;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.chip {
+  padding: 5px 14px;
+  border-radius: 8px;
+  background-color: #f2f5ff;
+  font-size: 18px;
+  color: #4f46e5;
+}
+
+.card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #f1f2f7;
+  font-size: 20px;
+}
+
+.card-time {
+  color: #9aa0b4;
+}
+
+.card-link {
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+/* 悬浮新增 */
+
+.fab {
+  position: fixed;
+  right: 32px;
+  bottom: calc(48px + env(safe-area-inset-bottom, 0px));
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b4fe0 0%, #7c6cf6 100%);
+  box-shadow: 0 14px 28px rgba(59, 79, 224, 0.4);
+
+  &:active {
+    opacity: 0.85;
+    transform: scale(0.96);
+  }
+}
+
+.fab-plus {
+  margin-top: -6px;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}

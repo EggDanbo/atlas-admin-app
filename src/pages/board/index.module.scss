@@ -1,0 +1,263 @@
+.page {
+  min-height: 100%;
+  padding-bottom: calc(26px + env(safe-area-inset-bottom, 0px));
+  background-color: #f5f6fa;
+}
+
+/* 概览卡 */
+.hero {
+  margin: 16px 16px 0;
+  padding: 24px 26px 22px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #3b4fe0 0%, #7c6cf6 100%);
+  box-shadow: 0 16px 30px rgba(59, 79, 224, 0.24);
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-label {
+  padding: 4px 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.18);
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-date {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-main {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.hero-value {
+  font-size: 66px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.hero-unit {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-hint {
+  display: block;
+  margin-top: 12px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* 指标 */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 16px 16px 0;
+}
+
+.tile {
+  flex: 1 1 calc(50% - 7px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 22px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(23, 23, 64, 0.05);
+}
+
+.tile-value {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1c1c2e;
+}
+
+.tile-unit {
+  font-size: 20px;
+  font-weight: 400;
+  color: #9aa0b4;
+}
+
+.tile-label {
+  font-size: 21px;
+  color: #9aa0b4;
+}
+
+/* 卡片 */
+.card {
+  margin: 16px 16px 0;
+  padding: 20px 24px 14px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(23, 23, 64, 0.05);
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.card-title {
+  font-size: 27px;
+  font-weight: 700;
+  color: #1c1c2e;
+}
+
+.card-hint {
+  font-size: 20px;
+  color: #9aa0b4;
+}
+
+.tip {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 22px;
+  color: #9aa0b4;
+}
+
+/* 柱状图 */
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 280px;
+  padding: 6px 4px 0;
+}
+
+.bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+}
+
+.bar-value {
+  font-size: 19px;
+  color: #6b7080;
+}
+
+.bar-track {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f5f6fa;
+  overflow: hidden;
+}
+
+.bar-fill {
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #7c6cf6 0%, #4f46e5 100%);
+  transition: height 0.3s ease;
+}
+
+.bar-label {
+  font-size: 19px;
+  color: #9aa0b4;
+}
+
+/* 部门分布 */
+.row {
+  padding: 12px 0 14px;
+  border-bottom: 1px solid #f4f5f9;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.row-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.row-name {
+  font-size: 23px;
+  color: #23263a;
+}
+
+.row-value {
+  font-size: 20px;
+  color: #9aa0b4;
+}
+
+.track {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f2f3f8;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #4f46e5 0%, #8b5cf6 100%);
+}
+
+/* 类型占比 */
+.type-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f4f5f9;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.type-name {
+  flex-shrink: 0;
+  width: 190px;
+  font-size: 22px;
+  color: #23263a;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.type-track {
+  flex: 1;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f2f3f8;
+  overflow: hidden;
+}
+
+.type-fill {
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #a5b4fc 0%, #6366f1 100%);
+}
+
+.type-value {
+  flex-shrink: 0;
+  width: 40px;
+  text-align: right;
+  font-size: 21px;
+  color: #6b7080;
+}

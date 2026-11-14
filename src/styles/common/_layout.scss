@@ -1,0 +1,70 @@
+// 页面布局
+
+// 页面根节点
+//
+// 普通页面：滚动容器（.taro_page）就是整个视口，用视口高度即可；
+// 带 tabBar 的页面：容器已经扣掉 50px，若仍用视口高度，每页都会多出一段
+// 「滚不动又不显示」的虚假滚动（tabBar 高度是物理像素，用大写 PX 跳过 px→rem）。
+.sp-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: $bg-color;
+  box-sizing: border-box;
+}
+
+.taro_tabbar_page .sp-page {
+  min-height: calc(100vh - 50PX);
+  min-height: calc(100dvh - 50PX);
+}
+
+// 带固定底部栏的页面：默认给底部操作栏预留高度
+//
+// 用 `.sp-page.sp-page--with-bar` 提高优先级：页面自身的 `.page` 常写 `padding` 简写，
+// 同优先级下会覆盖这里的 padding-bottom，导致最后一块内容被固定按钮压住。
+.sp-page.sp-page--with-bar {
+  padding-bottom: 150px;
+  padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px));
+}
+
+// 带悬浮按钮（FAB）的页面：右下角按钮约 108px + 48px 间距，预留 200px
+.sp-page.sp-page--with-fab {
+  padding-bottom: 200px;
+  padding-bottom: calc(200px + env(safe-area-inset-bottom, 0px));
+}
+
+.sp-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+// 回到顶部按钮
+.sp-backtop {
+  position: fixed;
+  right: 20px;
+  bottom: 140px;
+  z-index: $z-overlay;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  color: $primary-color;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(45, 140, 240, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+// 页面底部说明文字（演示数据提示等）
+.sp-footnote {
+  padding: 22px 0 4px;
+  text-align: center;
+}
+
+.sp-footnote-text {
+  font-size: 19px;
+  color: #b3b8c8;
+}

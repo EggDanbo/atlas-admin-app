@@ -1,0 +1,73 @@
+name: Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+# 只有部署需要的权限：读代码、写 Pages、签发 OIDC
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 部署不取消进行中的任务，避免站点停在半发布状态
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 版本由 package.json 的 packageManager 决定，保证本地与 CI 一致
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # 以 /atlas-admin-app/ 为 base 构建（子路径部署），纯前端 mock 演示
+      - name: Build
+        run: pnpm run build:h5
+        env:
+          TARO_APP_H5_BASENAME: atlas-admin-app
+          TARO_APP_USE_MOCK: 'true'
+          TARO_APP_PASSWORD_LOGIN: 'true'
+
+      # GitHub Pages 对未命中的路径返回 404.html。
+      # 把首页复制过去，刷新子路由才不会 404（history 路由回退）。
+      - name: SPA fallback
+        run: cp dist/atlas-admin-app/index.html dist/atlas-admin-app/404.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/atlas-admin-app
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

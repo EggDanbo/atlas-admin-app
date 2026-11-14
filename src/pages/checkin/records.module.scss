@@ -1,0 +1,142 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  background-color: #f5f6fa;
+}
+
+/* 月度汇总 */
+.summary {
+  display: flex;
+  align-items: center;
+  margin: 16px 16px 0;
+  padding: 22px 8px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #3b4fe0 0%, #7c6cf6 100%);
+  box-shadow: 0 14px 28px rgba(59, 79, 224, 0.22);
+}
+
+.summary-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.summary-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.summary-label {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.summary-divider {
+  width: 1px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.24);
+}
+
+/* 列表卡片 */
+.card {
+  margin: 18px 16px 0;
+  padding: 18px 24px 6px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(23, 23, 64, 0.05);
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 6px;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1c1c2e;
+}
+
+.card-hint {
+  font-size: 20px;
+  color: #9aa0b4;
+}
+
+.tip {
+  padding: 36px 0;
+  text-align: center;
+  font-size: 22px;
+  color: #9aa0b4;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f1f2f7;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.row-date {
+  display: flex;
+  flex-direction: column;
+  width: 108px;
+}
+
+.row-day {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1c1c2e;
+}
+
+.row-week {
+  font-size: 19px;
+  color: #9aa0b4;
+}
+
+.row-time {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  color: #23263a;
+}
+
+.row-arrow {
+  color: #c8ccd8;
+}
+
+.row-hours {
+  width: 80px;
+  text-align: right;
+  font-size: 22px;
+  color: #6b7080;
+}
+
+.tag {
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 19px;
+
+  &--ok {
+    color: #0d9488;
+    background-color: #ecfdf5;
+  }
+
+  &--warn {
+    color: #b45309;
+    background-color: #fffbeb;
+  }
+}

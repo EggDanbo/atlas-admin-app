@@ -1,0 +1,36 @@
+@import './styles/reset';
+@import './styles/common';
+
+:root,
+page {
+  --nut-primary-color: #4f46e5;
+  --nut-primary-color-end: #4f46e5;
+}
+
+/*
+ * H5 视口适配
+ *
+ * Taro 的 H5 布局是「外层定高 + 内层滚动」：
+ *   html/body → .taro-tabbar__container → .taro-tabbar__panel（留出 tabBar 高度）→ #app → .taro_page
+ * 只要这条 100% 链条上有任何一层拿不到确定高度，页面就会退化成「内容高度」，
+ * 结果是页面比屏幕高时底部 tabBar 被顶出视口、也无法滚动到底。
+ *
+ * 这里统一用 height: 100% 而不是 100vh / 100dvh：
+ * 移动端地址栏展开时 100vh 指的是「地址栏隐藏后」的高度，比真实可视高度大，
+ * 底部会被裁掉且滚不动；百分比高度则始终跟随真实的 containing block。
+ */
+html,
+body {
+  height: 100%;
+}
+
+#app,
+.taro-tabbar__container {
+  height: 100%;
+}
+
+/* 内层滚动容器：iOS 保持惯性滚动，避免把滚动传给整页触发下拉刷新/回弹 */
+.taro_page {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}

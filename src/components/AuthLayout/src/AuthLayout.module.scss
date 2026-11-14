@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+  min-height: 100%;
+}
+
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 120px 50px;
+}
