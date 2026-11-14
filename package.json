@@ -2,6 +2,7 @@
   "name": "atlas-admin-app",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@12.15.0",
   "description": "Atlas 工作台 · 移动端演示应用",
   "templateInfo": {
     "name": "default",
@@ -9,7 +10,7 @@
     "css": "sass"
   },
   "scripts": {
-    "build:weapp": "taro build --type weapp",
+    "build:weapp": "ATLAS_OUT_DIR=dist/weapp taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
     "build:tt": "taro build --type tt",
@@ -90,6 +91,5 @@
     "*.{js,ts,vue,jsx,tsx,scss}": [
       "eslint --fix"
     ]
-  },
-  "packageManager": "pnpm@12.15.0"
+  }
 }

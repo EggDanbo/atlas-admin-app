@@ -1,15 +1,19 @@
 {
-  "miniprogramRoot": "./dist/atlas-admin-app",
+  "miniprogramRoot": "./dist/weapp",
   "projectname": "atlas-admin-app",
   "description": "Atlas 移动工作台",
   "appid": "touristappid",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
-    "enhance": false,
-    "compileHotReLoad": false,
+    "enhance": true,
+    "compileHotReLoad": true,
     "postcss": false,
-    "minified": false
+    "minified": false,
+    "ignoreDevUnusedFiles": false,
+    "ignoreUploadUnusedFiles": true
   },
-  "compileType": "miniprogram"
+  "compileType": "miniprogram",
+  "libVersion": "3.5.5",
+  "condition": {}
 }
