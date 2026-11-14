@@ -17,11 +17,7 @@
 ![NutUI](https://img.shields.io/badge/NutUI-4.3-ff6b35)
 ![License](https://img.shields.io/badge/license-MIT-4f46e5)
 
-## 演示
-
-<p align="center">
-  <img src="docs/brand/atlas-demo.gif" width="300" alt="登录 → 打卡 → 我的 → 个人信息 → 所属单位">
-</p>
+## 在线体验
 
 <p align="center">
   <img src="docs/brand/atlas-app-qr.png" width="150" alt="扫码访问">
@@ -36,93 +32,17 @@
 | 页面 | 22 个页面：工作台 / 考勤规则 / 请假 / 打卡 / 通讯录 / 成员 / 看板 / 消息 / 我的 |
 | 数据 | 本地引擎生成：待办、单据、审批流、成员、考勤与看板指标 |
 | 请求 | 0 次真实网络请求，全部走本地适配器 |
-| 端 | H5（浏览器）+ 微信小程序（tourist appid 可预览） |
+| 端 | H5（浏览器）+ 微信小程序（产物已构建，开发者工具导入即可预览） |
 
 ## 界面预览
 
-| 登录 | 工作台 |
-| --- | --- |
-| ![登录](docs/screenshots/01-login.png) | ![工作台](docs/screenshots/02-workbench.png) |
+<p align="center">
+  <img src="docs/brand/atlas-demo.gif" width="300" alt="登录 → 打卡 → 我的 → 个人信息 → 所属单位">
+</p>
 
-| 打卡 | 消息中心 |
-| --- | --- |
-| ![打卡](docs/screenshots/04-checkin.png) | ![消息中心](docs/screenshots/09-message.png) |
-
-| 打卡完成态 | 我的 |
-| --- | --- |
-| ![打卡完成](docs/screenshots/10-checkin-done.png) | ![我的](docs/screenshots/11-mine.png) |
-
-| 个人信息 | 所属单位选择 |
-| --- | --- |
-| ![个人信息](docs/screenshots/49-profile.png) | ![所属单位](docs/screenshots/50-profile-team.png) |
-
-| 人脸采集 | 修改密码 |
-| --- | --- |
-| ![人脸采集](docs/screenshots/51-face.png) | ![修改密码](docs/screenshots/52-password.png) |
-
-| 打卡记录 | 考勤统计 |
-| --- | --- |
-| ![打卡记录](docs/screenshots/12-records.png) | ![考勤统计](docs/screenshots/13-stats.png) |
-
-| 通讯录 | 发起申请 |
-| --- | --- |
-| ![通讯录](docs/screenshots/14-contact.png) | ![发起申请](docs/screenshots/15-apply.png) |
-
-| 我的申请 | 申请详情 |
-| --- | --- |
-| ![我的申请](docs/screenshots/16-my-apply.png) | ![申请详情](docs/screenshots/17-apply-detail.png) |
-
-| 考勤规则 | 规则详情 |
-| --- | --- |
-| ![考勤规则](docs/screenshots/23-rules.png) | ![规则详情](docs/screenshots/24-rule-detail.png) |
-
-| 数据看板 | 成员管理 |
-| --- | --- |
-| ![数据看板](docs/screenshots/19-board.png) | ![成员管理](docs/screenshots/20-team.png) |
-
-| 规则设置 | 自由打卡规则 |
-| --- | --- |
-| ![规则设置](docs/screenshots/25-rule-edit.png) | ![自由打卡规则](docs/screenshots/26-free-rule.png) |
-
-| 排班制规则 | 按人排班表 |
-| --- | --- |
-| ![排班制规则](docs/screenshots/27-shift-rule.png) | ![按人排班表](docs/screenshots/32-roster-detail.png) |
-
-| 班次设置 | 部门多选 |
-| --- | --- |
-| ![班次设置](docs/screenshots/30-shift-slots.png) | ![部门多选](docs/screenshots/29-rule-dept.png) |
-
-| 逐人排班编辑 | 跨天冲突拦截 |
-| --- | --- |
-| ![逐人排班编辑](docs/screenshots/33-roster-edit.png) | ![跨天冲突](docs/screenshots/34-roster-conflict.png) |
-
-| 整月排班 | 人员选择 |
-| --- | --- |
-| ![整月排班](docs/screenshots/35-roster-month.png) | ![人员选择](docs/screenshots/36-roster-members.png) |
-
-| 选班次后确认 | 班次休息时间 |
-| --- | --- |
-| ![确认排班](docs/screenshots/40-shift-confirm.png) | ![班次休息](docs/screenshots/41-shift-rest.png) |
-
-| 多选班次 | 班次冲突提示 |
-| --- | --- |
-| ![多选班次](docs/screenshots/42-multi-pick.png) | ![班次冲突](docs/screenshots/43-pick-conflict.png) |
-
-| 班次休息自动取中 | 固定班次多班次 + 工作日 |
-| --- | --- |
-| ![班次休息](docs/screenshots/44-shift-rest-edit.png) | ![固定班次多班次](docs/screenshots/45-workdays.png) |
-
-| 固定班次详情 | 工作日互斥 + 排满 |
-| --- | --- |
-| ![固定班次详情](docs/screenshots/47-fixed-detail.png) | ![工作日互斥](docs/screenshots/48-shift-days-limit.png) |
-
-| 自定义每日工时 |
-| --- |
-| ![自定义工时](docs/screenshots/46-free-hours.png) |
-
-| 自定义休息时段 | 统一提示窗 |
-| --- | --- |
-| ![休息时段](docs/screenshots/37-rest-custom.png) | ![提示窗](docs/screenshots/38-toast.png) |
+<p align="center">
+  <sub>登录 → 打卡 → 我的 → 个人信息 → 所属单位选择 · <a href="docs/screenshots.md">查看全部 53 张界面截图</a></sub>
+</p>
 
 ## 功能模块
 
